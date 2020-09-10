@@ -46,13 +46,13 @@ export default {
       const value = this.value;
       this.childApp.vue_app = loadMicroApp({
         name: 'vue app',
-        entry: '/child-app/vue-app-001',
+        entry: '/micro-app-001',
         container: '#child-app-01',
         props: { value },
       });
       this.childApp.react_app = loadMicroApp({
         name: 'react app',
-        entry: '/child-app/react-app-002',
+        entry: '/micro-app-002',
         container: '#child-app-02',
         props: { value },
       });
