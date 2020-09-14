@@ -9,7 +9,7 @@
         <input class="input" type="text" v-model="value" @input="handleInput" />
       </div>
     </div>
-    <div v-if="container.length < 1" class="message">
+    <div v-if="container.length < 1" class="noApp-link">
       请前往
       <el-button @click="goAppStore" type="text"
         ><span style="font-size:20px">应用市场</span> </el-button
@@ -84,7 +84,7 @@ export default {
   height: 100%;
   margin-bottom: 20px;
 }
-.message {
+.noApp-link {
   margin-top: 60px;
   font-size: 22px;
   color: #606266;
