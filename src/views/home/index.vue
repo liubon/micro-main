@@ -32,10 +32,7 @@ export default {
   data() {
     return {
       value: '这里的的值将同步到微应用',
-      childApp: {
-        vue_app: null,
-        react_app: null,
-      },
+      childApp: {},
       container: [],
     };
   },
