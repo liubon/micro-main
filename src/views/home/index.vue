@@ -15,7 +15,7 @@
           <div slot="header" class="clearfix">
             <span>{{ item.name }}</span>
           </div>
-          <div :id="'child-app-' + item" class="container"></div> </el-card
+          <div :id="'child-app-' + item.id" class="container"></div> </el-card
       ></el-col>
     </el-row>
   </div>
