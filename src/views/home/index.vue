@@ -9,7 +9,13 @@
         <input class="input" type="text" v-model="value" @input="handleInput" />
       </div>
     </div>
-    <el-row :gutter="20">
+    <div v-if="container.length < 1" class="message">
+      请前往
+      <el-button @click="goAppStore" type="text"
+        ><span style="font-size:20px">应用市场</span> </el-button
+      >添加应用
+    </div>
+    <el-row v-else :gutter="20">
       <el-col :span="12" v-for="item in container" :key="item.id"
         ><el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -52,14 +58,14 @@ export default {
     loadChild() {
       const subs = JSON.parse(localStorage.getItem('sub_apps'));
       this.container = [];
-      const value = this.value;
+      const props = { value: this.value };
       subs.forEach((item) => {
         this.container.push({ name: item.app_name, id: item.app_id });
         this.childApp[item.app_name] = loadMicroApp({
           name: item.app_name,
           entry: item.app_url,
           container: '#child-app-' + item.app_id,
-          props: value,
+          props,
         });
       });
     },
@@ -77,6 +83,12 @@ export default {
   /* margin-top: 60px; */
   height: 100%;
   margin-bottom: 20px;
+}
+.message {
+  margin-top: 60px;
+  font-size: 22px;
+  color: #606266;
+  text-align: center;
 }
 .child-app {
   width: 50%;
