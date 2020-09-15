@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="main-app">
     <el-button @click="goAppStore" type="primary">前往应用市场</el-button>
-    <div id="main-app">
+    <div class="hello">
       <img alt="Vue logo" src="../../assets/logo.png" />
       <HelloWorld msg="This is The Main App !" />
       <div>
@@ -75,15 +75,16 @@ export default {
 
 <style rel="stylesheet/scss" lang="less">
 #main-app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-  height: 100%;
-  margin-bottom: 20px;
-
+  .hello {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    /* margin-top: 60px; */
+    height: 100%;
+    margin-bottom: 20px;
+  }
   .noApp-link {
     margin-top: 60px;
     font-size: 22px;
