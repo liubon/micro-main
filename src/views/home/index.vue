@@ -73,7 +73,7 @@ export default {
 };
 </script>
 
-<style>
+<style rel="stylesheet/scss" lang="less">
 #main-app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -83,24 +83,29 @@ export default {
   /* margin-top: 60px; */
   height: 100%;
   margin-bottom: 20px;
-}
-.noApp-link {
-  margin-top: 60px;
-  font-size: 22px;
-  color: #606266;
-  text-align: center;
-}
-.child-app {
-  width: 50%;
-}
-.label {
-  font-size: 24px;
-  margin-right: 20px;
-  font-weight: 600;
-}
-.input {
-  height: 30px;
-  width: 400px;
-  font-size: 20px;
+
+  .noApp-link {
+    margin-top: 60px;
+    font-size: 22px;
+    color: #606266;
+    text-align: center;
+  }
+  .child-app {
+    width: 50%;
+  }
+  .container {
+    height: 520px;
+    overflow: auto;
+  }
+  .label {
+    font-size: 24px;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  .input {
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+  }
 }
 </style>
