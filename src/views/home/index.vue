@@ -95,7 +95,7 @@ export default {
     width: 50%;
   }
   .container {
-    height: 520px;
+    height: 500px;
     overflow: auto;
   }
   .label {
