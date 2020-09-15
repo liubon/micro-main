@@ -73,7 +73,7 @@ export default {
 };
 </script>
 
-<style rel="stylesheet/scss" lang="less">
+<style rel="stylesheet/scss" lang="less" scope>
 #main-app {
   .hello {
     font-family: Avenir, Helvetica, Arial, sans-serif;
