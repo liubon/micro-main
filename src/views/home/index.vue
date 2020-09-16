@@ -59,15 +59,17 @@ export default {
       const subs = JSON.parse(localStorage.getItem('sub_apps'));
       this.container = [];
       const props = { value: this.value };
-      subs.forEach((item) => {
-        this.container.push({ name: item.app_name, id: item.app_id });
-        this.childApp[item.app_name] = loadMicroApp({
-          name: item.app_name,
-          entry: item.app_url,
-          container: '#child-app-' + item.app_id,
-          props,
+      if (subs) {
+        subs.forEach((item) => {
+          this.container.push({ name: item.app_name, id: item.app_id });
+          this.childApp[item.app_name] = loadMicroApp({
+            name: item.app_name,
+            entry: item.app_url,
+            container: '#child-app-' + item.app_id,
+            props,
+          });
         });
-      });
+      }
     },
   },
 };

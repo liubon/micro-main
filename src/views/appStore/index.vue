@@ -69,7 +69,7 @@ export default {
                 item.selected = false;
               }
             }
-            return item;
+            return { selected: false, ...item };
           });
         });
     },
